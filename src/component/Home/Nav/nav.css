@@ -1,0 +1,25 @@
+.nav {
+  align-items: center;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+.nav li {
+  margin-left: 20px;
+  list-style: none;
+}
+
+.nav li a {
+  font-size: 14px;
+  font-weight: 700;
+  align-items: center;
+  color: #e5e5e5;
+  height: 100%;
+  position: relative;
+}
+.nav-menu {
+  align-items: center;
+  display: flex;
+  height: 100%;
+  font-weight: 700;
+}

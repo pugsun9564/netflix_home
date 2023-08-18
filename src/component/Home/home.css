@@ -1,0 +1,82 @@
+.home {
+  border-color: #141414;
+  color: #fff;
+}
+.home a {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.home-header {
+  position: relative;
+  height: 70px;
+  z-index: 1;
+}
+.nav_bar {
+  height: 68px;
+  right: 0;
+  left: 0;
+  z-index: 1;
+  top: 0px;
+  background: transparent;
+  position: relative;
+  display: flex;
+  padding: 0 60px;
+  background-image: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.8) 10%,
+    transparent
+  );
+  align-items: center;
+}
+.logo {
+  height: 25px;
+  cursor: pointer;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 25px;
+}
+.right {
+  height: 100%;
+  right: 60px;
+  align-items: center;
+  flex-grow: 1;
+  display: flex;
+  justify-content: flex-end;
+  position: absolute;
+  top: 0;
+}
+
+.searchBox {
+  display: inline-block;
+  vertical-align: middle;
+}
+.search {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  display: inline-block;
+}
+.home-header svg {
+  width: 24px;
+  height: 24px;
+  fill: #fff;
+  fill-rule: evenodd;
+}
+
+.noti {
+  position: relative;
+}
+.noti-menu {
+  background-color: transparent;
+  border: none;
+  margin-top: 4.2px;
+  padding: 2px 6px 3px;
+  position: relative;
+  cursor: pointer;
+}
+.profile {
+  cursor: pointer;
+  margin-top: 4.2px;
+  padding: 2px 6px 3px;
+}
