@@ -41,16 +41,14 @@ function F(props) {
     <div
       className="title-card"
       style={{
-        padding: '0 0.2vw',
+        padding: '0 0.2rem',
       }}
       onClick={handlePopup}
     >
       <div className="contents">
-        <a>
-          <div className="box-container">
-            <img src={props.src}></img>
-          </div>
-        </a>
+        <div className="box-container">
+          <img src={props.src}></img>
+        </div>
       </div>
     </div>
   );

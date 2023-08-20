@@ -37,10 +37,34 @@
 }
 .description {
   color: #fff;
-  font-size: 1.2vw;
+  font-size: 1.2rem;
   font-weight: 400;
   line-height: normal;
-  margin-top: 0.1vw;
+  margin-top: 0.1rem;
   text-shadow: 2px;
 }
+.banner-btn {
+  display: flex;
+  gap: 20px;
+}
 
+.playBtn,.moreBtn {
+  margin-top: 30px;
+  width: 200px;
+  text-align: center;
+  align-items: center;
+  padding: 10px 30px;
+  box-sizing: border-box;
+  font-size: 20px;
+  cursor: pointer;
+}
+.playBtn {
+  color: #000;
+  background-color: #fff;
+  border-radius: 5px;
+}
+.moreBtn {
+  color: #fff;
+  background-color: #000;
+  border-radius: 5px;
+}

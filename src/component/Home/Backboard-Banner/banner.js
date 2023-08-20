@@ -1,6 +1,6 @@
 import React from 'react';
 import './banner.css';
-import { BsPlayFill } from 'react-icons/bs';
+import { BsPlayFill, BsExclamationCircle } from 'react-icons/bs';
 
 export default function banner() {
   return (
@@ -28,11 +28,13 @@ export default function banner() {
               </div>
             </div>
           </div>
-          <div className="banner-links-btn">
+          <div className="banner-btn">
             <div className="playBtn">
-              <BsPlayFill />
+              <BsPlayFill />재생
             </div>
-            <div className="moreBtn"></div>
+            <div className="moreBtn">
+              <BsExclamationCircle />상세 정보
+            </div>
           </div>
         </div>
       </div>

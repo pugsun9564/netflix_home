@@ -9,11 +9,11 @@ export default function cards(props) {
   const name = props.className;
 
   function videos() {
-    if (name === 'rank') {
-      return <RankItem name={type}></RankItem>;
-    } else {
+    // if (name === 'rank') {
+    //   return <RankItem name={type}></RankItem>;
+    // } 
       return <SliderItem name={type}></SliderItem>;
-    }
+    
   }
 
   return (
