@@ -47,7 +47,7 @@ function F(props) {
     >
       <div className="contents">
         <div className="box-container">
-          <img src={props.src}></img>
+          <img src={props.src} alt='img'></img>
         </div>
       </div>
     </div>

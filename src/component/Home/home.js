@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useEffect, useState } from 'react';
 import Nav from './Nav/nav';
 import Backboard from './Backboard-Banner/backboard';
@@ -10,6 +11,10 @@ import { popupState } from './recoil/Popup';
 import { scrollState } from './recoil/Scroll';
 import { useRecoilValue } from 'recoil';
 import Detail from './Detail/detail';
+
+import { FaFacebookF, FaTwitter, FaYoutube } from 'react-icons/fa';
+import { AiOutlineInstagram } from 'react-icons/ai';
+
 export default function Home() {
   const [ScrollY, setScrollY] = useState(0);
   const [scrollActive, setScrollActive] = useState(false);
@@ -85,7 +90,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </div>{' '}
+      </div>
       {/* header */}
       <div className="content">
         <span className="container">
@@ -102,6 +107,111 @@ export default function Home() {
         <Cards name="오직 넷플릭스에서"></Cards>
         <Cards name="긴장감 넘치는 한국 범죄 수사 영화"></Cards>
       </div>
+      <footer>
+        <div className="socials">
+          <a href="https://www.facebook.com/NetflixKR" className="social">
+            <FaFacebookF className="social_icon" />
+          </a>
+          <a href="https://www.instagram.com/netflixkr/" className="social">
+            <AiOutlineInstagram className="social_icon" />
+          </a>
+          <a href="https://twitter.com/netflixkr" className="social">
+            <FaTwitter className="social_icon" />
+          </a>
+          <a
+            href="https://www.youtube.com/channel/UCiEEF51uRAeZeCo8CJFhGWw/featured"
+            className="social"
+          >
+            <FaYoutube className="social_icon" />
+          </a>
+        </div>
+        <ul className="footer_items">
+          <li className="footer_item">
+            <a href="#" className="footer_link_item">
+              화면 해설
+            </a>
+          </li>
+          <li className="footer_item">
+            <a href="#" className="footer_link_item">
+              고객 센터
+            </a>
+          </li>
+          <li className="footer_item">
+            <a href="#" className="footer_link_item">
+              기프트카드
+            </a>
+          </li>
+          <li className="footer_item">
+            <a href="#" className="footer_link_item">
+              미디어 센터
+            </a>
+          </li>
+          <li className="footer_item">
+            <a href="#" className="footer_link_item">
+              투자 정보(R)
+            </a>
+          </li>
+          <li className="footer_item">
+            <a href="#" className="footer_link_item">
+              입사 정보
+            </a>
+          </li>
+          <li className="footer_item">
+            <a href="#" className="footer_link_item">
+              이용 약관
+            </a>
+          </li>
+          <li className="footer_item">
+            <a href="#" className="footer_link_item">
+              개인정보
+            </a>
+          </li>
+          <li className="footer_item">
+            <a href="#" className="footer_link_item">
+              법적 고지
+            </a>
+          </li>
+          <li className="footer_item">
+            <a href="#" className="footer_link_item">
+              쿠키 설정
+            </a>
+          </li>
+          <li className="footer_item">
+            <a href="#" className="footer_link_item">
+              회사 정보
+            </a>
+          </li>
+          <li className="footer_item">
+            <a href="#" className="footer_link_item">
+              문의하기
+            </a>
+          </li>
+        </ul>
+        <div className="footer_service">
+          <button className="serviceBtn">서비스 코드</button>
+        </div>
+        <div class="copy-text">
+          <div class="copy-text-block">
+            넷플릭스서비시스코리아 유한회사 통신판매업신고번호:
+            제2018-서울종로-0426호 전화번호: 080-001-9587
+          </div>
+          <div class="copy-text-block">대표: 레지널드 숀 톰프슨</div>
+          <div class="copy-text-block">이메일 주소: korea@netflix.com</div>
+          <div class="copy-text-block">
+            주소: 대한민국 서울특별시 종로구 우정국로 26, 센트로폴리스 A동 20층
+            우편번호 03161
+          </div>
+          <div class="copy-text-block">사업자등록번호: 165-87-00119</div>
+          <div class="copy-text-block">
+            클라우드 호스팅: Amazon Web Services Inc.
+          </div>
+          <div class="copy-text-block">
+            <a href="http://www.ftc.go.kr/bizCommPop.do?wrkr_no=1658700119">
+              공정거래위원회 웹사이트
+            </a>
+          </div>
+        </div>
+      </footer>
       {popup ? '' : <Detail />}
       <div
         style={

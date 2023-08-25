@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import './detail.css';
 import { useRecoilState } from 'recoil';
 import { popupState } from '../recoil/Popup';
-import EpiItem from './episodeitem';
 // import MoreCardItem from './MoreCardItem';
 
 export default function Detail() {
@@ -65,6 +64,7 @@ export default function Detail() {
             >
               <div className="player-name">
                 <img
+                  alt="img"
                   src="https://occ-0-395-325.1.nflxso.net/dnm/api/v6/tx1O544a9T7n8Z_G12qaboulQQE/AAAABVkD8YrYl-2u12h1sggHqTWxoPihPeIMoShX3xGCIqEteaxZaovpMGCmmMgwxSOmMNSiWQTT05CkM8WxSdm29apU_lhadWhEC46LUn_GvzeFSmoftzNxLFK6Eu4xorlCLsDoErmSnJMDbuZ5NaxGYIt6NCtRI6D2659B-0LU22-Od88G1xV9.webp?r=801"
                   style={{
                     width: '100%',
@@ -139,199 +139,6 @@ export default function Detail() {
               fill="#fff"
             ></path>
           </svg>
-        </div>
-        <div className="detail-info">
-          <div className="detail-container">
-            <div className="content-container">
-              <div className="detail-content">
-                <div className="detail-content-left">
-                  <div className="detail-info">
-                    <div className="videoMetadata-container">
-                      <div className="videoMetadata-first">
-                        <span
-                          style={{
-                            color: '#46d369',
-                            whiteSpace: 'unset',
-                            maxWidth: '300px',
-                            fontWeight: '700',
-                          }}
-                        >
-                          99% 일치
-                        </span>
-                      </div>
-                      <div className="videoMetadata-second">
-                        <div className="year" style={{ marginRight: '0.5em' }}>
-                          2022
-                        </div>
-                        <span
-                          className="duration"
-                          style={{ marginRight: '0.5em' }}
-                        >
-                          에피소드 16개
-                        </span>
-                        <span className="player-feature-budge">HD</span>
-                        <div className="video-adBadge-container">
-                          <div style={{ position: 'relative' }}>
-                            <span className="audio-descrption">
-                              <svg viewBox="0 0 58.07 24">
-                                <path d="M18.34,10.7v7.62l-4.73,0ZM.5,26.6h8l2.17-3,7.49,0s0,2.08,0,3.06h5.7V2.77H17C16.3,3.79.5,26.6.5,26.6Z"></path>
-                                <path d="M30.63,8.91c3.6-.13,6.1,1.8,6.48,4.9.5,4.15-2.43,6.85-6.66,6.56V9.19A.26.26,0,0,1,30.63,8.91ZM25,3V26.56c5.78.11,10.22.32,13.49-1.85a12.2,12.2,0,0,0,5.14-11.36A11.52,11.52,0,0,0,33.38,2.72c-2.76-.23-8.25,0-8.25,0A.66.66,0,0,0,25,3Z"></path>
-                                <path d="M43.72,3.43c1.45-.4,1.88,1.2,2.51,2.31a18.73,18.73,0,0,1-1.42,20.6h-.92a1.86,1.86,0,0,1,.42-1.11,21.39,21.39,0,0,0,2.76-10.16A22.54,22.54,0,0,0,43.72,3.43Z"></path>
-                                <path d="M48.66,3.43c1.43-.4,1.87,1.2,2.5,2.31a18.83,18.83,0,0,1-1.42,20.6h-.91c-.07-.42.24-.79.41-1.11A21.39,21.39,0,0,0,52,15.07,22.63,22.63,0,0,0,48.66,3.43Z"></path>
-                                <path d="M53.57,3.43c1.46-.4,1.9,1.2,2.54,2.31a18.58,18.58,0,0,1-1.44,20.6h-.93c-.07-.42.24-.79.42-1.11A21,21,0,0,0,57,15.07,22.26,22.26,0,0,0,53.57,3.43Z"></path>
-                              </svg>
-                            </span>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="detail-rank">
-                    <div className="rank-message">
-                      <svg viewBox="0 0 24 24">
-                        <path
-                          d="M3 2C2.44772 2 2 2.44772 2 3V21C2 21.5523 2.44772 22 3 22H21C21.5523 22 22 21.5523 22 21V3C22 2.44772 21.5523 2 21 2H3ZM17.2299 10.8934C16.6125 10.4971 15.8913 10.2996 15.0673 10.2996C14.2444 10.2996 13.5231 10.4971 12.9056 10.8934C12.2881 11.2905 11.8114 11.8536 11.4762 12.5839C11.1411 13.3149 10.9735 14.1695 10.9735 15.1493C10.9735 16.1383 11.1411 16.9957 11.4762 17.7221C11.8114 18.4478 12.2881 19.0091 12.9056 19.4052C13.5231 19.8014 14.2444 20 15.0673 20C15.8913 20 16.6125 19.8014 17.2299 19.4052C17.8475 19.0091 18.3242 18.4478 18.6594 17.7221C18.9945 16.9957 19.1612 16.1383 19.1612 15.1493C19.1612 14.1695 18.9945 13.3149 18.6594 12.5839C18.3242 11.8536 17.8475 11.2905 17.2299 10.8934ZM9.47922 19.7994V10.3263L4.92658 11.4351V13.2656L7.20991 12.6774V19.7994H9.47922ZM13.7606 12.9513C14.0767 12.4298 14.5117 12.1701 15.0673 12.1701C15.6239 12.1701 16.0589 12.4298 16.3751 12.9513C16.6913 13.4718 16.8489 14.2058 16.8489 15.1493C16.8489 16.0938 16.6913 16.8268 16.3751 17.3473C16.0589 17.8688 15.6239 18.1296 15.0673 18.1296C14.5117 18.1296 14.0767 17.8688 13.7606 17.3473C13.4442 16.8268 13.2868 16.0938 13.2868 15.1493C13.2868 14.2058 13.4442 13.4718 13.7606 12.9513ZM13.0737 4.19939C12.7285 4.06677 12.3485 4 11.9344 4C11.5194 4 11.1405 4.06677 10.7952 4.19939C10.4521 4.33122 10.1518 4.51771 9.89848 4.75622C9.64404 4.99367 9.44963 5.27379 9.312 5.59396C9.17437 5.91504 9.10556 6.26299 9.10556 6.63872C9.10556 7.01446 9.17437 7.36241 9.312 7.68349C9.44963 8.00352 9.64404 8.28286 9.89848 8.52136C10.1518 8.75974 10.4521 8.9453 10.7952 9.07792C11.1405 9.20976 11.5194 9.27745 11.9344 9.27745C12.3485 9.27745 12.7285 9.20976 13.0737 9.07792C13.4168 8.9453 13.7161 8.75974 13.9704 8.52136C14.2239 8.28286 14.4194 8.00352 14.557 
-                                      7.68349C14.6947 7.36241 14.7635 7.01446 14.7635 6.63872C14.7635 6.26299 14.6947 5.91504 14.557 5.59396C14.4194 5.27379 14.2239 4.99367 13.9704 4.75622C13.7161 4.51771 13.4168 4.33122 13.0737 4.19939ZM8.75526 5.30869V4.12288H4V5.30869H5.63894V9.15457H7.11632V5.30869H8.75526ZM18.9904 4.3469C18.6683 4.19847 18.2893 4.12327 17.8484 4.12327H15.5101V9.15392H16.9855V7.70838H17.8484C18.2893 7.70838 18.6683 7.63318 18.9904 7.48384C19.3117 7.33541 19.5601 7.12483 19.7366 6.85484C19.9132 6.58578 20 6.26931 20 5.90845C20 5.55682 19.9132 5.24587 19.7366 4.97602C19.5601 4.70683 19.3117 4.49624 18.9904 4.3469ZM11.2392 5.39166C11.4387 5.27379 11.6701 5.21545 11.9344 5.21545C12.1988 5.21545 12.4302 5.27379 12.6297 5.39166C12.8292 5.50954 12.9849 5.67653 13.0955 5.89001C13.2072 6.10521 13.2632 6.35386 13.2632 6.63872C13.2632 6.92267 13.2072 7.17224 13.0955 7.38651C12.9849 7.60092 12.8292 7.76791 12.6297 7.88565C12.4302 8.00352 12.1988 8.062 11.9344 8.062C11.6701 8.062 11.4387 8.00352 11.2392 7.88565C11.0397 7.76791 10.8841 7.60092 10.7724 7.38651C10.6617 7.17224 10.6057 6.92267 10.6057 6.63872C10.6057 6.35386 10.6617 6.10521 10.7724 5.89001C10.8841 5.67653 11.0397 5.50954 11.2392 5.39166ZM16.9855 5.27195H17.6149C17.9252 5.27195 18.1515 5.32845 18.2913 5.43895C18.4309 5.54931 18.5017 5.70616 18.5017 5.90845C18.5017 6.11535 18.4309 6.27589 18.2913 6.38902C18.1515 6.50228 17.9252 6.55878 17.6149 6.55878H16.9855V5.27195Z"
-                          fillRule="evenodd"
-                        ></path>
-                      </svg>
-                      오늘 시리즈 순위 1위
-                    </div>
-                  </div>
-                  <div className="detail-synopsis">
-                    <div>
-                      천재적인 두뇌의 소유자 우영우. 대형 로펌의 신입 변호사이자
-                      자폐 스펙트럼 장애를 가진 여성으로서 법정 안팎에서 다양한
-                      난관을 헤쳐간다.
-                    </div>
-                  </div>
-                </div>
-                <div className="detail-content-right">
-                  <div className="detail-tag">
-                    <span style={{ color: '#777' }}>출연: </span>
-                    <span className="tag-item">박은빈, </span>
-                    <span className="tag-item">강태오, </span>
-                    <span className="tag-item">강기영</span>
-                  </div>
-                  <div className="detail-tag">
-                    <span style={{ color: '#777' }}>장르: </span>
-                    <span className="tag-item">TV 프로그램·법정</span>
-                    <span className="tag-item">한국 드라마, </span>
-                    <span className="tag-item">사회 문제를 다룬 드라마</span>
-                  </div>
-                  <div className="detail-tag">
-                    <span style={{ color: '#777' }}>시리즈 특징: </span>
-                    <span className="tag-item">힐링, </span>
-                    <span className="tag-item">감명을 주는, </span>
-                    <span className="tag-item">진심 어린</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="content-container">
-              <div className="epiSelector">
-                <div className="epiSelector-header">
-                  <h3 className="header-label">회차</h3>
-                  <div className="header-name">이상한 변호사 우영우</div>
-                </div>
-                <div className="epiSelector-container">
-                  <EpiItem clickstate={isClick}></EpiItem>
-                  <div className="section-divider">
-                    <button
-                      className="btncontrol"
-                      onClick={() => setIsClick(!isClick)}
-                    >
-                      <div>
-                        <svg width={24} height={24} viewBox="0 0 24 24">
-                          <path
-                            fill="#fff"
-                            fillRule="evenodd"
-                            d={
-                              isClick
-                                ? 'M19.293 16.7071L12.0001 9.41421L4.70718 16.7071L3.29297 15.2929L11.293 7.29289C11.4805 7.10536 11.7349 7 12.0001 7C12.2653 7 12.5196 7.10536 12.7072 7.29289L20.7072 15.2929L19.293 16.7071Z'
-                                : 'M19.293 7.29297L12.0001 14.5859L4.70718 7.29297L3.29297 8.70718L11.293 16.7072C11.4805 16.8947 11.7349 17.0001 12.0001 17.0001C12.2653 17.0001 12.5196 16.8947 12.7072 16.7072L20.7072 8.70718L19.293 7.29297Z'
-                            }
-                          ></path>
-                        </svg>
-                      </div>
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="content-container">
-              <div className="more-wrapper">
-                <h3 className="header-label">함께 시청된 콘텐츠</h3>
-                <div className="section-container">
-                  <div className="more-container">
-                    {/* <MoreCardItem></MoreCardItem> */}
-                  </div>
-                </div>
-
-                <div className="section-divider">
-                  <button
-                    className="btncontrol"
-                    onClick={() => setIsClick2(!isClick2)}
-                  >
-                    <div>
-                      <svg width={24} height={24} viewBox="0 0 24 24">
-                        <path
-                          fill="#fff"
-                          fillRule="evenodd"
-                          d={
-                            isClick2
-                              ? 'M19.293 16.7071L12.0001 9.41421L4.70718 16.7071L3.29297 15.2929L11.293 7.29289C11.4805 7.10536 11.7349 7 12.0001 7C12.2653 7 12.5196 7.10536 12.7072 7.29289L20.7072 15.2929L19.293 16.7071Z'
-                              : 'M19.293 7.29297L12.0001 14.5859L4.70718 7.29297L3.29297 8.70718L11.293 16.7072C11.4805 16.8947 11.7349 17.0001 12.0001 17.0001C12.2653 17.0001 12.5196 16.8947 12.7072 16.7072L20.7072 8.70718L19.293 7.29297Z'
-                          }
-                        ></path>
-                      </svg>
-                    </div>
-                  </button>
-                </div>
-              </div>
-            </div>
-
-            <div className="content-container">
-              <div className="about-wrapper">
-                <div className="about-header">
-                  <h3>
-                    <strong>이상한 변호사 우영우</strong>
-                    상세정보
-                  </h3>
-                </div>
-                <div className="about-container">
-                  <AboutTagItem
-                    title="크리에이터:"
-                    content="유인석, 문지원"
-                  ></AboutTagItem>
-                  <AboutTagItem
-                    title="출연:"
-                    content="박은빈, 강태오, 강기영"
-                  ></AboutTagItem>
-                  <AboutTagItem
-                    title="장르:"
-                    content="TV 프로그램·법정한국 드라마, 사회 문제를 다룬 드라마, 드라마"
-                  ></AboutTagItem>
-                  <AboutTagItem
-                    title="시리즈 특징:"
-                    content="힐링, 감명을 주는, 진심 어린"
-                  ></AboutTagItem>
-                  <AboutTagItem
-                    title="관람등급:"
-                    rating="15"
-                    content="15세이상관람가"
-                  ></AboutTagItem>
-
-                  <div className="broadcaster">
-                    <div>ENA</div>
-                    <div>2022. 3. 1.</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </div>
